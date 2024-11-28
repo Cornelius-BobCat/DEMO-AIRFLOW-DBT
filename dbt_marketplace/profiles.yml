@@ -1,0 +1,12 @@
+dbt_marketplace:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      threads: 1
+      host: localhost
+      port: 5432
+      user: marketplace_user
+      pass: marketplace_password
+      dbname: marketplace
+      schema: ""

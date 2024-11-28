@@ -1,0 +1,11 @@
+version: 2
+
+models:
+  - name: mart_brands_products
+    description: "mart brands products"
+    columns:
+      - name: id
+        description: "The primary key for this table"
+        data_tests:
+          - unique
+          - not_null

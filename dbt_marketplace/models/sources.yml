@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: marketplace
+    database: marketplace
+    schema: public
+    tables:
+      - name: brands
+        alias: stg_brand

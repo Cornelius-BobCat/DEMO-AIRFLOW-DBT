@@ -1,0 +1,100 @@
+1,2,4,On Hold,Senior
+2,38,76,Open,General Admission
+3,22,43,Closed,Group
+4,47,36,On Hold,Senior
+5,39,93,Closed,Early Bird
+6,28,78,On Hold,Group
+7,28,56,Cancelled,Child
+8,38,55,Closed,Child
+9,22,76,Resolved,Group
+10,18,43,Resolved,Senior
+11,36,36,Closed,General Admission
+12,37,10,On Hold,Early Bird
+13,25,71,On Hold,Military
+14,44,73,Open,Senior
+15,2,50,Closed,Military
+16,44,4,Closed,Senior
+17,30,87,Closed,Senior
+18,46,60,Cancelled,General Admission
+19,49,91,Open,Group
+20,48,97,Cancelled,General Admission
+21,41,95,Resolved,Senior
+22,35,82,Cancelled,Early Bird
+23,35,70,Cancelled,Senior
+24,21,72,Closed,Child
+25,20,69,Closed,Group
+26,3,44,Closed,Student
+27,40,69,On Hold,VIP
+28,2,42,Closed,Military
+29,25,39,On Hold,Child
+30,47,5,On Hold,Child
+31,21,4,Open,Military
+32,25,42,Closed,Child
+33,29,50,Open,Group
+34,38,94,On Hold,VIP
+35,19,41,Cancelled,Senior
+36,50,57,On Hold,Military
+37,13,75,Resolved,VIP
+38,13,100,Closed,VIP
+39,29,25,On Hold,Senior
+40,34,28,Closed,General Admission
+41,18,57,In Progress,Child
+42,27,67,In Progress,VIP
+43,28,35,In Progress,Student
+44,17,54,In Progress,Child
+45,33,55,Resolved,General Admission
+46,24,33,On Hold,Early Bird
+47,27,50,Resolved,Military
+48,18,47,Resolved,VIP
+49,39,54,Resolved,Military
+50,18,35,On Hold,Early Bird
+51,5,77,Open,General Admission
+52,19,35,Closed,Military
+53,8,9,On Hold,Military
+54,10,36,Open,General Admission
+55,20,39,On Hold,Student
+56,17,97,In Progress,General Admission
+57,49,66,On Hold,Student
+58,33,16,On Hold,General Admission
+59,8,10,Open,VIP
+60,5,22,In Progress,Senior
+61,9,18,In Progress,Senior
+62,5,10,Open,Early Bird
+63,38,75,Closed,Senior
+64,20,7,On Hold,Group
+65,4,71,Open,Military
+66,36,50,Closed,Military
+67,25,55,Resolved,Child
+68,28,18,In Progress,Child
+69,9,11,Open,VIP
+70,6,31,Resolved,General Admission
+71,16,56,Open,General Admission
+72,28,6,Open,Senior
+73,3,33,Cancelled,Military
+74,17,8,Closed,Child
+75,4,94,Cancelled,Child
+76,47,95,Closed,Group
+77,48,72,Open,Military
+78,36,9,In Progress,Student
+79,5,20,In Progress,Senior
+80,10,11,Open,Group
+81,12,49,Resolved,Student
+82,6,59,Closed,Student
+83,25,32,Cancelled,Early Bird
+84,30,90,Open,Group
+85,8,4,Open,VIP
+86,25,50,Open,General Admission
+87,42,83,Open,Student
+88,33,65,Open,Group
+89,5,10,In Progress,Senior
+90,33,65,On Hold,Military
+91,3,5,On Hold,Student
+92,16,31,Cancelled,VIP
+93,2,3,On Hold,Group
+94,2,30,Closed,Senior
+95,11,3,Open,Student
+96,9,21,Resolved,Student
+97,21,17,Open,VIP
+98,20,39,On Hold,Student
+99,45,90,Resolved,Student
+100,20,39,In Progress,Military
