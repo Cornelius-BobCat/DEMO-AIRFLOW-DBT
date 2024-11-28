@@ -58,3 +58,5 @@ Cela affichera des informations sur l'UID et le GID, par exemple :
 ```
 uid=50000(airflow) gid=50000 groups=50000
 ```
+
+docker --host=unix:///var/run/docker.sock info
