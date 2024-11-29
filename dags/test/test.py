@@ -1,5 +1,6 @@
 from airflow import DAG
 from airflow.providers.docker.operators.docker import DockerOperator
+from airflow.operators.bash import BashOperator
 from datetime import datetime
 
 # Définir le DAG
@@ -14,12 +15,19 @@ dag = DAG(
 # Définir le DockerOperator
 dbt_run_task = DockerOperator(
     task_id='run_dbt_models',  # ID de la tâche
-    docker_url = "unix:///var/run/docker.sock",
     image='dbt_marketplace_image',  # Image Docker à utiliser
     command='dbt run --models staging_brand',  # Commande à exécuter dans le conteneur
     dag=dag,
     auto_remove=True,  # Supprimer le conteneur après exécution
+    docker_url="unix://var/run/docker.sock",
     network_mode='bridge',  # Mode réseau du conteneur (s'adapte en fonction de votre configuration)
+    #volumes=["/var/run/docker.sock:/var/run/docker.sock"],
+)
+
+# Définir le BashOperator
+t1 = BashOperator(
+    task_id='echo_test',
+    bash_command='echo "Test command executed successfully!"',
 )
 
 # Si vous avez d'autres tâches à ajouter, vous pouvez les définir et les lier
