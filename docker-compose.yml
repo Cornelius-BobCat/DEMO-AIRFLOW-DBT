@@ -336,3 +336,4 @@ volumes:
 
 networks:
   dbt-network:
+    driver: bridge

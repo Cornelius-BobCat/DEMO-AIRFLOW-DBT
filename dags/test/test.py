@@ -20,7 +20,8 @@ dbt_run_task = DockerOperator(
     dag=dag,
     auto_remove=True,  # Supprimer le conteneur après exécution
     docker_url="unix://var/run/docker.sock",
-    network_mode='bridge',  # Mode réseau du conteneur (s'adapte en fonction de votre configuration)
+    network_mode='demo-airflow-dbt_dbt-network',  # Remplacez par le nom de votre réseau Docker
+    mount_tmp_dir=False,  # Désactiver le montage du répertoire temporaire
     #volumes=["/var/run/docker.sock:/var/run/docker.sock"],
 )
 

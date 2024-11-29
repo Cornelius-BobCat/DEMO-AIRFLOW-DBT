@@ -1,62 +1,36 @@
-# Documentation pour l'utilisation de Docker avec Airflow
+# Instructions pour l'utilisation de Docker sur Mac
 
-## Accéder au conteneur Airflow
+## Problème de permissions lors du montage de volumes
 
-Pour accéder à un conteneur Docker exécutant Airflow, vous pouvez utiliser la commande suivante :
+Lorsque vous montez le volume `//var/run/docker.sock:/var/run/docker.sock` dans votre fichier `docker-compose.yml`, il peut y avoir des problèmes de permissions. En effet, les droits d'accès au dossier monté ne sont pas automatiquement attribués comme prévu.
 
-```bash
-docker exec -it 227f10fd718f bash
-```
+### Étapes à suivre
 
-Cela devrait retourner :
+1. **Lancer Docker Compose**  
+   Exécutez votre configuration Docker Compose comme d'habitude :
 
-```
-airflow
-```
+   ```bash
+   docker-compose up
+   ```
 
-Pour obtenir plus d'informations sur l'utilisateur, vous pouvez utiliser la commande :
+2. **Accéder au conteneur avec les droits root**  
+   Si vous rencontrez des problèmes de permissions, vous devez entrer dans le conteneur avec les droits root. Utilisez la commande suivante, en remplaçant `1eedf1cd26a0` par l'ID de votre conteneur :
 
-```bash
-id
-```
+   ```bash
+   docker exec -it --user root 1eedf1cd26a0 /bin/bash
+   ```
 
-Cela affichera des informations sur l'UID et le GID, par exemple :
+3. **Modifier les permissions du socket Docker**  
+   Une fois à l'intérieur du conteneur, exécutez la commande suivante pour changer les permissions du socket Docker :
+   ```bash
+   chmod 777 /var/run/docker.sock
+   ```
 
-```
-uid=50000(airflow) gid=50000 groups=50000
-```
+### Remarques
 
-### Explication de la commande
+- **Sécurité** : Changer les permissions à `777` donne un accès complet à tous les utilisateurs. Cela peut poser des problèmes de sécurité. Il est recommandé de restreindre les permissions autant que possible en fonction de vos besoins.
+- **Alias de dossier** : Si vous utilisez un alias de dossier pour projeter les droits du dossier réellement visé, assurez-vous que cet alias est correctement configuré avant de monter le volume.
 
-- `docker exec`: Cette commande permet d'exécuter une commande dans un conteneur en cours d'exécution.
-- `-it`: Ces options permettent d'exécuter le conteneur en mode interactif et d'allouer un pseudo-terminal.
-- `227f10fd718f`: C'est l'ID du conteneur que vous souhaitez accéder. Remplacez-le par l'ID de votre conteneur si nécessaire.
-- `bash`: Cela ouvre un shell Bash à l'intérieur du conteneur.
+### Conclusion
 
-### Vérification de l'utilisateur
-
-Une fois à l'intérieur du conteneur, vous pouvez vérifier l'utilisateur courant avec la commande suivante :
-
-```bash
-whoami
-```
-
-Cela devrait retourner :
-
-```
-airflow
-```
-
-Pour obtenir plus d'informations sur l'utilisateur, vous pouvez utiliser la commande :
-
-```bash
-id
-```
-
-Cela affichera des informations sur l'UID et le GID, par exemple :
-
-```
-uid=50000(airflow) gid=50000 groups=50000
-```
-
-docker --host=unix:///var/run/docker.sock info
+Ces étapes devraient vous permettre de résoudre les problèmes de permissions liés au montage de volumes dans Docker sur Mac. Assurez-vous de suivre les meilleures pratiques de sécurité lors de la gestion des permissions.

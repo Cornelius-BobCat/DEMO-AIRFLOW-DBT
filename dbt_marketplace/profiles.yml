@@ -4,7 +4,7 @@ dbt_marketplace:
     dev:
       type: postgres
       threads: 1
-      host: localhost
+      host: postgres_data
       port: 5432
       user: marketplace_user
       pass: marketplace_password

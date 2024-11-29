@@ -9,9 +9,7 @@ To load the data into a PostgreSQL database, execute the following command repla
 ```bash
 docker exec -it postgres_data bash
 cd init
-psql postgres://<user>:<password>@<host>:<port>/<db> -f load.sql -v current_dir="$(pwd)"
 psql postgres://marketplace_user:marketplace_password@localhost:5432/marketplace -f load.sql -v current_dir="$(pwd)"
-
 ```
 
 Ce positionner dans le dossier init du conteneur postgres_data

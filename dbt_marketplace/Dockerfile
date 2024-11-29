@@ -17,6 +17,9 @@ WORKDIR /usr/app/dbt_marketplace
 
 # Copier les fichiers de ton projet dbt dans l'image 
 COPY . /usr/app/dbt_marketplace
-
+# Copier les fichiers de profils
+COPY profiles.yml /usr/app/dbt_marketplace/profiles/
 # Définir les variables d'environnement nécessaires
 ENV DBT_PROFILES_DIR=/usr/app/dbt_marketplace/profiles
+
+
