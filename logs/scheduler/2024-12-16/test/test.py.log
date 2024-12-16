@@ -1,0 +1,7 @@
+[2024-12-16T22:06:56.952+0000] {processor.py:186} INFO - Started process (PID=447) to work on /opt/airflow/dags/test/test.py
+[2024-12-16T22:06:56.953+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/test/test.py for tasks to queue
+[2024-12-16T22:06:56.956+0000] {logging_mixin.py:190} INFO - [2024-12-16T22:06:56.956+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/test/test.py
+[2024-12-16T22:06:56.968+0000] {processor.py:925} INFO - DAG(s) 'dbt_marketplace_dag' retrieved from /opt/airflow/dags/test/test.py
+[2024-12-16T22:06:56.990+0000] {logging_mixin.py:190} INFO - [2024-12-16T22:06:56.989+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2024-12-16T22:06:57.004+0000] {logging_mixin.py:190} INFO - [2024-12-16T22:06:57.004+0000] {dag.py:4180} INFO - Setting next_dagrun for dbt_marketplace_dag to 2024-12-16 22:05:00+00:00, run_after=2024-12-16 22:06:00+00:00
+[2024-12-16T22:06:57.014+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/test/test.py took 0.073 seconds

@@ -7,7 +7,7 @@ from datetime import datetime
 dag = DAG(
     'dbt_marketplace_dag',  # Nom du DAG
     description='Un DAG pour exécuter dbt dans Docker',
-    schedule_interval=None,  # Aucun planning (à lancer manuellement ou via un trigger)
+    schedule_interval='* * * * *',  # Exécuter toutes les 30 secondes
     start_date=datetime(2024, 11, 28),  # Date de début
     catchup=False  # Pas de backfill pour les dates passées
 )

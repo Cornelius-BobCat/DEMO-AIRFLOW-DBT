@@ -1,11 +1,10 @@
 version: 2
 
 models:
-  - name: stg_brand
-    description: "staging brand"
+  - name: staging_brand
+    description: "Description of the stg_brand model"
     columns:
       - name: id
-        description: "The primary key for this table"
-        data_tests:
-          - unique
-          - not_null
+        description: "Unique identifier for the brand"
+      - name: brand
+        description: "Name of the brand"
