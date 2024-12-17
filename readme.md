@@ -8,6 +8,13 @@ Lancer la commande suivante pour démarrer le projet :
 init.sh
 ```
 
+Ensuite lanccer la commande suivante pour construire l'image docker DBT qui sera appelé par airflow dans un DAG airflow.
+
+```bash
+cd dbt_marketplace
+docker build -t dbt_marketplace_image:latest .
+```
+
 ## Without init.sh
 
 Lorsque vous montez le volume `//var/run/docker.sock:/var/run/docker.sock` dans votre fichier `docker-compose.yml`, il peut y avoir des problèmes de permissions. En effet, les droits d'accès au dossier monté ne sont pas automatiquement attribués comme prévu.
